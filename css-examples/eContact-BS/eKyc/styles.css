@@ -1,0 +1,49 @@
+:root {
+  --text-darkest: #718096;
+  --text-success: #29d395;
+  --text-active: #567df4;
+  --bg-success: rgba(41, 211, 149, 0.16);
+  --bg-grey: #edf2f7;
+  --bg-main: rgb(247, 250, 252);
+  --bg-btn-active: rgba(0, 98, 255, 0.16);
+  --bg-light: #edf2f7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif !important;
+  background-color: var(--bg-main);
+}
+a:hover {
+  text-decoration: none !important;
+}
+.btn:active,
+.btn:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+.table thead th {
+  background-color: var(--bg-light);
+  border-top: 0;
+  border-bottom: 0;
+}
+.table tbody td {
+  border-top: 0;
+  border-bottom: 1px solid var(--bg-light);
+}
+.tab-bar a {
+  color: var(--text-darkest);
+}
+.tab-bar a:hover {
+  background-color: var(--bg-btn-active);
+  color: var(--text-active) !important;
+}
+.tag {
+  background-color: var(--bg-success);
+  color: var(--text-success);
+}

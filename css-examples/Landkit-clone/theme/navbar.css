@@ -1,0 +1,90 @@
+.navbar .dropdown .dropdown-toggle:active {
+  pointer-events: none;
+}
+.navbar .dropdown .dropdown-toggle::after {
+  display: none;
+}
+.navbar .dropdown-content {
+  padding: 2.375rem 2.5rem;
+}
+.navbar .dropdown .dropdown-menu {
+  z-index: 8;
+  display: block;
+  border: none;
+  padding: 0;
+  visibility: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgb(22 28 45 / 10%);
+  left: 50%;
+  transform: translate(-50%, 10px);
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+.navbar .dropdown .dropdown-menu.show {
+  visibility: visible;
+  transform: translate(-50%, 0px);
+  opacity: 1;
+  transition: all 0.25s ease-in;
+}
+.navbar .dropright {
+  position: relative;
+}
+.navbar .dropright .dropdown-menu {
+  display: block;
+  position: absolute;
+  z-index: 9;
+  border: none;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgb(22 28 45 / 10%);
+  top: 0;
+  left: 50%;
+  transform: translate(50%, -16px);
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+.navbar .dropright .dropdown-menu.show {
+  visibility: visible;
+  transform: translate(50%, -26px);
+  opacity: 1;
+  transition: all 0.25s ease-in;
+}
+.navbar .dropdown .dropdown-header {
+  color: #335eea;
+  letter-spacing: 0.08em;
+  padding: 0;
+  text-transform: uppercase;
+}
+.navbar .dropdown .dropdown-item {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  color: #506690;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+.navbar .dropdown .dropdown-item:hover {
+  color: #335eea;
+}
+.navbar .dropdown .sm-menu {
+  min-width: auto;
+  padding: 26px 28px !important;
+}
+.navbar .dropdown .large-menu {
+  min-width: 42rem;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+.navbar .large-menu .dropdown-img-start {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://landkit.goodthemes.co/assets/img/photos/photo-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navbar .large-menu .text-white {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 94, 234, 0.8);
+}

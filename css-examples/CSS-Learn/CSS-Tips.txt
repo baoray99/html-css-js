@@ -1,0 +1,44 @@
+--Functions--
+-var(): dùng biến/ var(--text-color)
+-calc(): tính toán/ width: calc(33% - 30px)
+-attr(): dùng thuộc tính của element/ ::before{content: attr(data-title)}
+-linear-gradient: 2 màu trong 1 box/ background-image: linear-gradient(0deg, rgba(), rgba())
+
+--Pseudo classes--
+:hover, :root, :active, :first-child ...
+
+--Pseudo element--
+::before, ::after, ...
+
+--background-clip(dùng cho background-color) / background-origin(dùng cho background-image)--
+Dùng để đổ màu nền cho border, default là content-box
+
+--background-image--
+Url nào ở trước sẽ đè lên url ở sau
+
+--background-size--
+nên dùng keywords là contain hoặc cover
+
+--background short-hand--
+background: url or color no-repeat position / size(contain / cover)
+
+--position absolute--
+phụ thuộc vào thẻ cha có position: relative gần nhất
+
+--subnav-mobile--
+ko set position absolute như trên pc
+
+--Dùng grid để responsive--
+ở thẻ cha: display: grid; grid-template-columns: repeat( auto-fit, minmax(n px, 1fr))
+
+--Dùng text-shadow làm nổi chữ cho dễ nhìn--
+
+--Khi media query thì nên dùng em thay px, lên đổi px sang em--
+
+--flex-box dùng space-evenly để cách đều hết các div con, khác vs around--
+
+--BEM--
+
+--input with dropdown--
+ dung ~ .class con để hiện class con
+

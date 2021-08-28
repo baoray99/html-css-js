@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eKyc</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row mx-0">
+        <div class="col">
+          <div class="content-header mb-4">
+            <div class="row mx-0 py-3">
+              <div class="col p-0 d-md-flex">
+                <h2 class="font-weight-bold mr-auto">
+                  Thông tin cấu hình eKYC
+                </h2>
+                <button class="btn btn-primary">
+                  <i class="fas fa-pen mr-2"></i>Chỉnh sửa
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-bar bg-white">
+            <div class="row mx-0">
+              <a
+                href="#"
+                class="
+                  col-sm-2 col-3
+                  py-sm-3
+                  px-sm-4
+                  p-2
+                  text-center
+                  border border-light
+                "
+                ><i class="fas fa-address-card mr-md-2"></i>
+                <span class="d-none d-lg-inline-block">CMND</span></a
+              >
+              <a
+                href="#"
+                class="
+                  col-sm-2 col-3
+                  py-sm-3
+                  px-sm-4
+                  p-2
+                  text-center
+                  border border-light
+                "
+                ><i class="fas fa-passport mr-md-2"></i
+                ><span class="d-none d-lg-inline-block">Hộ chiếu</span>
+              </a>
+              <a
+                href="#"
+                class="
+                  col-sm-2 col-3
+                  py-sm-3
+                  px-sm-4
+                  p-2
+                  text-center
+                  border border-light
+                "
+                ><i class="fas fa-microchip mr-md-2"></i
+                ><span class="d-none d-lg-inline-block">CCCD có gắn chip</span>
+              </a>
+            </div>
+          </div>
+          <div class="edit-table table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">STT</th>
+                  <th scope="col">Tên trường</th>
+                  <th scope="col">Kiểu dữ liệu</th>
+                  <th scope="col">Mô tả</th>
+                  <th scope="col">Ngưỡng cảnh báo</th>
+                  <th scope="col">Ngưỡng thành công</th>
+                  <th scope="col">Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>So khớp khuôn mặt</td>
+                  <td>string</td>
+                  <td>Tỉ lệ so khớp ảnh chụp chân dung và ảnh trên giấy tờ</td>
+                  <td>40</td>
+                  <td>80</td>
+                  <td><span class="tag p-1 rounded">Đang hoạt động</span></td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>So khớp khuôn mặt</td>
+                  <td>string</td>
+                  <td>Tỉ lệ so khớp ảnh chụp chân dung và ảnh trên giấy tờ</td>
+                  <td>40</td>
+                  <td>80</td>
+                  <td><span class="tag p-1 rounded">Đang hoạt động</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

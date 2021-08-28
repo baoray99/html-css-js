@@ -1,0 +1,15 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "HK Grotesk", sans-serif !important;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #fff;
+  color: #161c2d;
+}

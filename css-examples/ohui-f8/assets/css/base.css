@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --primary-color: rgb(251, 85, 51);
+  --border-color: #bdbdbd;
+}
+* {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid__full-width {
+  width: 100%;
+}
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.grid__col-2 {
+  padding: 0 5px;
+  width: 16.67%;
+}
+.grid__col-2-4 {
+  width: 20%;
+  padding: 0 5px;
+}
+.grid__col-10 {
+  padding: 0 5px;
+  width: 83.33%;
+}
+.btn {
+  height: 34px;
+  min-width: 142px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 2px;
+}
+.btn:hover {
+  background-color: #ccc;
+}
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn.btn-icon {
+  padding: 8px;
+  width: 210px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* display: flex; */
+}
+.modal__content {
+  margin: auto;
+  position: relative;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  animation: zoomIn 0.25s ease-in-out;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.select-input {
+  height: 34px;
+  min-width: 200px;
+  padding: 0 12px;
+  border-radius: 2px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-item {
+  margin: 0 8px;
+}
+.pagination-item--active .pagination-item__link {
+  background-color: var(--primary-color);
+  color: white;
+}
+.pagination-item__link {
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 30px;
+  text-decoration: none;
+  color: #939393;
+  min-width: 40px;
+  height: 30px;
+  border-radius: 2px;
+}
+.pagination-item__link:hover {
+  filter: brightness(90%);
+}
+
