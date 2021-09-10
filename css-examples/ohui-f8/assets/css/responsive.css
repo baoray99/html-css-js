@@ -1,0 +1,135 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+  :root {
+    --header-sort-bar: 46px;
+  }
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+  .header__cart-list {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 100%;
+    padding: 0 calc((100% - 644px) / 2);
+  }
+  .header__cart-list::before {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .container {
+    margin-top: calc(var(--header-sort-bar) + var(--header-height));
+  }
+  .header__sort-bar {
+    display: flex;
+  }
+  .mobile__category {
+    display: block;
+  }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  :root {
+    --header-height: 68px;
+    --header-navbar: 0px;
+    --header-sort-bar: 46px;
+  }
+  .hide-on-tablet {
+    display: none;
+  }
+  .header__cart {
+    margin: 0 0 0 40px;
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  :root {
+    --header-height: 54px;
+    --header-navbar: 0px;
+    --header-sort-bar: 46px;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .header__logo {
+    display: block;
+    flex: 0;
+    margin: 0 auto;
+  }
+  .header__mobile-search {
+    margin-left: 20px;
+    display: block;
+  }
+  .header-with-search {
+    justify-content: space-between;
+  }
+  .header__cart {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .header__search {
+    position: fixed;
+    display: none;
+    top: var(--header-height);
+    z-index: 99999;
+    width: 100%;
+    height: 46px;
+    padding: 0 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    animation: mobileSlideIn 0.15s linear;
+    transform-origin: top;
+  }
+  .header__logo-svg{
+    width: 110px;
+  }
+  @keyframes mobileSlideIn {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+  .container {
+    margin-top: calc(var(--header-sort-bar) + var(--header-height));
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .home-product__pagination {
+    margin: 20px 0 16px;
+  }
+  .pagination-item {
+    margin: 0;
+  }
+  .pagination-item__link {
+    font-size: 1.6rem;
+    min-width: 30px;
+  }
+  .footer__top{
+    padding: 0 16px;
+  }
+  .footer-item-icon{
+    width: 20px;
+  }
+  .footer__heading{
+    text-align: center;
+  }
+  .footer-item__link{
+    text-align: center;
+  }
+  .footer__download{
+    display: flex;
+    justify-content: center;
+  }
+}

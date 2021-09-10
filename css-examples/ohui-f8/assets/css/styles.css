@@ -1,8 +1,12 @@
+.app {
+  overflow-x: hidden;
+}
 .header {
-  height: 120px;
+  height: var(--header-height);
   background-image: linear-gradient(0, #fe6433, #f53e2d);
 }
 .header__navbar {
+  height: var(--header-navbar);
   display: flex;
   justify-content: space-between;
 }
@@ -344,6 +348,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: var(--header-with-search);
+}
+.header__mobile-search {
+  display: none;
+}
+.header__search-checkbox:checked ~ .header__search {
+  display: flex;
+}
+.header__mobile-search i {
+  font-size: 2.6rem;
+  color: white;
 }
 .header__logo {
   flex: 2.5;
@@ -396,6 +411,7 @@ path {
   border-radius: 2px;
   box-shadow: 0 1px 5px rgb(168, 167, 167);
   overflow: hidden;
+  z-index: 99;
 }
 .header__search-header {
   padding: 10px 16px;
@@ -417,6 +433,7 @@ path {
   text-align: center;
   position: relative;
   margin: 0 80px;
+  -webkit-tap-highlight-color: transparent;
 }
 .header__cart:hover .header__cart-list {
   transform: scale(1);
@@ -431,7 +448,7 @@ path {
   right: -6px;
   z-index: 20;
   width: 400px;
-  height: 50vh;
+  max-height: 50vh;
   border-radius: 2px;
   background-color: white;
   box-shadow: 0 1px 3.125rem rgba(0, 0, 0, 0.2);
@@ -612,15 +629,53 @@ path {
   font-size: 1.4rem;
   color: white;
 }
+.header__sort-bar {
+  position: fixed;
+  display: none;
+  width: 100%;
+  top: var(--header-height);
+  height: var(--header-sort-bar);
+  background-color: white;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header__sort-item {
+  flex: 1;
+}
+.header__sort-link {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  font-size: 1.4rem;
+  height: 100%;
+  line-height: var(--header-sort-bar);
+  text-align: center;
+  position: relative;
+}
+.header__sort-link::after {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.header__sort-item:last-child .header__sort-link:after {
+  display: none;
+}
+.header__sort-item--active .header__sort-link {
+  color: var(--primary-color);
+}
 /* Container style */
 .container {
   background-color: #f5f5f5;
 }
-.grid__col-2,
-.grid__col-10 {
-  margin-top: 40px;
-}
+
 .category {
+  margin-top: 40px;
   background-color: white;
   border-radius: 2px;
   font-size: 1.4rem;
@@ -684,6 +739,7 @@ path {
 
 /* Home sort + filter */
 .home-filter {
+  margin-top: 40px;
   background-color: rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
@@ -764,6 +820,49 @@ path {
   color: #ccc;
   background-color: #f9f9f9;
   cursor: default;
+}
+.mobile__category {
+  display: none;
+}
+.mobile__category-list {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.mobile__category-list::-webkit-scrollbar{
+  display: none;
+}
+.mobile__category-item {
+  flex-shrink: 0;
+}
+.mobile__category-item:nth-of-type(3n + 1) .mobile__category-link {
+  background-color: #ffce3e;
+}
+.mobile__category-item:nth-of-type(3n + 2) .mobile__category-link {
+  background-color: #fe6433;
+}
+.mobile__category-item:nth-of-type(3n + 3) .mobile__category-link {
+  background-color: #f53e2d;
+}
+.mobile__category-link {
+  --line-height: 2rem;
+  text-decoration: none;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 300;
+  line-height: var(--line-height);
+  text-align: center;
+  max-width: 110px;
+  height: calc(var(--line-height) * 2);
+  border-radius: 6px;
+  margin-right: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .home-product {
   margin-bottom: 20px;
@@ -968,21 +1067,21 @@ i.home-product-item__act-liked-icon {
   object-fit: contain;
   border: 1px solid #ccc;
 }
-.footer__download-link{
+.footer__download-link {
   text-decoration: none;
   background-color: transparent;
 }
 .footer__download-apps {
-  flex: 1;
+  /* flex: 1; */
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.footer__bottom{
+.footer__bottom {
   background-color: #f5f5f5;
 }
-.footer__text{
+.footer__text {
   margin: 20px 0 0 0;
   padding: 12px 24px;
   text-align: center;
